@@ -1,5 +1,9 @@
 # Section Spéciale : Deepfakes expliqué aux Enfants
 
+<div align="center">
+  <img src="../components/enfant.png" alt="Illustration de Deepfake" title="Illustration de Deepfake">
+</div>
+
 ## Qu’est-ce qu’un deepfake ?
 Un deepfake, c’est comme un dessin animé très spécial créé par un ordinateur, sauf qu’il peut faire croire que des personnes réelles disent ou font des choses qu’elles n’ont jamais faites. Imagine une vidéo où ton professeur chante une chanson rigolote qu’il n’a jamais chantée pour de vrai ! C’est amusant quand c’est pour jouer, mais ça peut aussi être utilisé pour de mauvaises raisons.
 

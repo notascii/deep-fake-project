@@ -1,5 +1,9 @@
 # Techniques Détaillées pour Détecter les Deepfakes
 
+<div align="center">
+  <img src="../components/deepfake.jpg" alt="Illustration de Deepfake" title="Illustration de Deepfake">
+</div>
+
 Avec l'essor des deepfakes, il devient essentiel de maîtriser des techniques avancées pour repérer ces manipulations numériques. Les deepfakes utilisent des algorithmes d'intelligence artificielle pour créer des contenus difficilement distinguables du réel. Voici un guide approfondi pour détecter et contrer ces faux contenus.
 
 ---

@@ -1,4 +1,7 @@
 # Applications et Impact des Deepfakes
+<div align="center">
+  <img src="../components/Deepfakes.jpg" alt="Illustration de Deepfake" title="Illustration de Deepfake">
+</div>
 
 ## Objectif
 Les deepfakes sont des technologies à double tranchant. Ils possèdent des applications fascinantes et bénéfiques dans divers domaines, mais ils présentent également des risques importants. Cette section explore ces deux facettes pour aider à comprendre leur portée et leur impact sur la société.

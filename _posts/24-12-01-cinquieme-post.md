@@ -1,7 +1,10 @@
 # Enjeux Environnementaux et Sociétaux des Deepfakes
 
-## Enjeux Sociétaux
+<div align="center">
+  <img src="../components/image.png" alt="Illustration de Deepfake" title="Illustration de Deepfake">
+</div>
 
+## Enjeux Sociétaux
 ### Désinformation et Manipulation
 Les deepfakes représentent un outil puissant pour diffuser de la désinformation et manipuler l'opinion publique. Ils permettent de créer des vidéos réalistes où des personnalités publiques semblent tenir des propos ou adopter des comportements qu'elles n'ont jamais eus. Cela pose plusieurs défis :
 - **Altération de la confiance dans les médias** : Les utilisateurs peuvent devenir sceptiques face aux contenus médiatiques, ne sachant plus distinguer le vrai du faux.

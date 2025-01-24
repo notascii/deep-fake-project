@@ -1,7 +1,7 @@
 # Décrypter le Processus de Création des Deepfakes : Guide Étape par Étape
 
 
-
+<div align="center"> <img src="../components/make.webp" alt="Illustration de Deepfake" title="Illustration de Deepfake"> </div>
 
 ## Étapes de Création des Vidéos Deepfakes
 
@@ -20,7 +20,7 @@ Nous détaillerons chacune de ces étapes avec une explication complète des tec
 #### Sourcing des Données d'Entraînement de Haute Qualité
 Pour générer des deepfakes de haute qualité, des ensembles de données contenant des milliers d'images ou vidéos sont nécessaires. Ces ensembles sont souvent collectés de diverses sources :  
 - **Vidéo haute résolution** : Essentielle pour capter les micro-expressions et détails.  
-- **Bases de données publiques** : Exemples incluent CelebA et LFW (Labeled Faces in the Wild), qui contiennent des millions d'images annotées de visages.  
+- **Bases de données publiques** : Exemples incluent CelebA et LFW (Labeled Faces in the Wild)(https://www.kaggle.com/datasets/jessicali9530/lfw-dataset), qui contiennent des millions d'images annotées de visages.  
 - **Données personnalisées** : Capturées par caméra ou extraites de réseaux sociaux, mais cela peut poser des questions éthiques.
 
 #### Outils et Techniques d'Augmentation de Données
@@ -85,6 +85,85 @@ Pour améliorer la qualité des visages générés :
    - Ajustement des couleurs pour correspondre au ton de peau.  
    - Techniques de flou pour lisser les transitions entre le visage source et le corps cible.  
 2. **Formation Progressive des GANs** : Améliore progressivement la résolution des images pour un rendu haute définition.  
+
+---
+
+
+### **Démonstration : Création d'une Vidéo Deepfake avec "Easy-Wav2Lip"**
+
+L'objectif est de comprendre comment les algorithmes et les outils fonctionnent en coulisses en générant un exemple simple de vidéo où les mouvements des lèvres du visage s'accordent parfaitement avec un fichier audio donné.
+
+#### **Étape 1 : Configuration de l'Environnement Colab**
+Pour simplifier la création de deepfakes, nous avons conçu une interface simple via un Google Colab.  
+Suivez ces étapes pour l'utiliser :  
+1. Ouvrez notre démonstration interactive dans Google Colab : **[Easy-Wav2Lip Colab](https://github.com/anothermartz/Easy-Wav2Lip)**  
+2. Lancez l'exécution des cellules pour configurer les outils nécessaires.  
+
+Voici un extrait du code que vous exécuterez :  
+
+```python
+# Vérifier l'installation et configurer l'environnement
+if os.path.exists('installed.txt'):
+    with open('last_file.txt', 'r') as file:
+        last_file = file.readline()
+    if last_file == version:
+        sys.exit('Easy-Wav2Lip '+version+' a déjà été exécuté dans cet environnement !')
+
+# Vérifier la disponibilité du GPU
+if not torch.cuda.is_available():
+    sys.exit('Aucun GPU détecté. Veuillez activer le GPU dans les paramètres d’exécution.')
+
+# Installer les bibliothèques nécessaires
+!pip install batch_face --quiet
+!pip install basicsr==1.4.2 --quiet
+!pip install gfpgan --quiet
+```
+### Pourquoi est-ce important ?  
+Cette étape montre comment les outils automatisent l'alignement, l'extraction des caractéristiques, et l'application de transformations sur les visages.
+
+---
+
+### Étape 2 : Ajout des Fichiers Sources  
+Pour cette étape, vous devez fournir :  
+- **Une vidéo source** : Le fichier contenant le visage à animer.  
+- **Un fichier audio** : Optionnel, si la vidéo source n'a pas déjà de son intégré.  
+
+#### Dans l'interface Colab :  
+- **Pour les utilisateurs sur ordinateur** : Cliquez sur l'icône 📁 pour copier le chemin du fichier source.  
+- **Pour les utilisateurs mobiles** : Long-press (appui long) sur un fichier pour copier son chemin.  
+
+**Exemple de paramétrage dans Colab :**  
+```python
+video_file = "/content/drive/MyDrive/video.mp4"  # Remplacez avec votre chemin
+vocal_file = "/content/drive/MyDrive/audio.mp3"  # Facultatif
+quality = "Enhanced"  # Choisissez entre Fast, Improved ou Enhanced
+```
+### Étape 3 : Génération de la Vidéo Synchronisée  
+Une fois les fichiers fournis, exécutez la cellule finale. Le processus inclut :  
+1. **Détection et alignement du visage.**  
+2. **Synchronisation labiale** basée sur le fichier audio.  
+3. **Amélioration des visages** avec **GFPGAN** pour un réalisme accru.  
+
+**Code Colab principal :**  
+```python
+# Synchroniser le visage avec l'audio
+!python run.py --video $video_file --audio $vocal_file --quality $quality
+```
+Le résultat est une vidéo générée avec des lèvres parfaitement synchronisées.\
+
+## Résultat Final : Deepfake Réalisé  
+
+Pour notre démonstration, nous avons suivi les étapes décrites précédemment afin de construire notre propre deepfake. Et voilà le résultat que nous avons obtenu 😁 :  
+
+### **Vidéo : Trump Deepfake**  
+
+<video controls width="640" height="360">
+  <source src="../components/trump_deepfake.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo. Vous pouvez [télécharger la vidéo ici](../components/trump_deepfake.mp4).
+</video>
+
+
+
 
 ---
 
