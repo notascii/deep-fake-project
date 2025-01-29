@@ -20,7 +20,7 @@ Nous détaillerons chacune de ces étapes avec une explication complète des tec
 #### Sourcing des Données d'Entraînement de Haute Qualité
 Pour générer des deepfakes de haute qualité, des ensembles de données contenant des milliers d'images ou vidéos sont nécessaires. Ces ensembles sont souvent collectés de diverses sources :  
 - **Vidéo haute résolution** : Essentielle pour capter les micro-expressions et détails.  
-- **Bases de données publiques** : Exemples incluent CelebA et LFW (Labeled Faces in the Wild)(https://www.kaggle.com/datasets/jessicali9530/lfw-dataset), qui contiennent des millions d'images annotées de visages.  
+- **Bases de données publiques** : Exemples incluent CelebA et LFW [Labeled Faces in the Wild](https://www.kaggle.com/datasets/jessicali9530/lfw-dataset), qui contiennent des millions d'images annotées de visages.  
 - **Données personnalisées** : Capturées par caméra ou extraites de réseaux sociaux, mais cela peut poser des questions éthiques.
 
 #### Outils et Techniques d'Augmentation de Données
@@ -158,7 +158,7 @@ Pour notre démonstration, nous avons suivi les étapes décrites précédemment
 ### **Vidéo : Trump Deepfake**  
 
 <video controls width="640" height="360">
-  <source src="../components/trump_deepfake.mp4" type="video/mp4">
+  <source src="../components/Trump_deepfake.mp4" type="video/mp4">
   Votre navigateur ne supporte pas la balise vidéo. Vous pouvez [télécharger la vidéo ici](../components/trump_deepfake.mp4).
 </video>
 
